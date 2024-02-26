@@ -12,6 +12,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const submitHandler = async (data) => {
+    console.log("submitted");
+  };
+
   useEffect(() => {
     user && navigate("/dashboard");
   }, [user]);
@@ -25,10 +29,46 @@ const Login = () => {
             <span className="flex gap-1 py-1 px-3 border rounded-full text-sm md:text-base border-gray-300 text-gray-600">
               Manage all your task in one place!
             </span>
+            <p className="flex flex-col gap-0 md:gap-4 text-4xl md:text-6xl 2xl:text-7xl font-bold text-center text-blue-700">
+              <span>Cloud-Based</span>
+              <span>Task Manager</span>
+            </p>
+
+            <div>
+              <div className="circle rotate-in-up-left"></div>
+            </div>
           </div>
         </div>
         {/* right side */}
-        <div></div>
+        <div className="w-full md:w-1/3 p-4 md:p-1 flex flex-col justify-center items-center">
+          <form
+            onSubmit={handleSubmit(submitHandler)}
+            className="form-container w-full md:w-[400px] flex flex-col gap-y-8 bg-white px-10 pt-14 pb-14"
+          >
+            <div className="">
+              <p className="text-blue-600 text-3xl font-bold text-center">
+                Welcome Back !
+              </p>
+              <span className="text-center text-base text-gray-700">
+                Keep all your credential safe.
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-y-5">
+              <Textbox
+              placeholder="email@example.com"
+              type="email"
+              name="email"
+              label="Email Address"
+              classNames="w-full rounded-full"
+              register={register("email", {
+                required: "Email Address is required!"
+              })}
+              errors={errors.email ? errors.email.message : ""}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
