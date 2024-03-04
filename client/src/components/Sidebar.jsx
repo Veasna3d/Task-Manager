@@ -64,7 +64,7 @@ const Sidebar = () => {
     dispatch(setOpenSidebar(false));
   };
 
-  const NavLink = (el) => {
+  const NavLink = ({ el }) => {
     return (
       <Link
         to={el.link}
@@ -88,14 +88,14 @@ const Sidebar = () => {
         <span className="text-2xl font-bold text-black">TaskMe</span>
       </h1>
 
-      <div className="felx-1 flex flex-col gap-y-5 py-8">
+      <div className="flex-1 flex flex-col gap-y-5 py-8">
         {sidebarLinks.map((link) => (
           <NavLink el={link} key={link.label} />
         ))}
       </div>
 
-      <div>
-        <button className="w-full flex gap-2 p-2 items-center text-lg text-gray-800">
+      <div className=''>
+        <button className='w-full flex gap-2 p-2 items-center text-lg text-gray-800'>
           <MdSettings />
           <span>Settings</span>
         </button>

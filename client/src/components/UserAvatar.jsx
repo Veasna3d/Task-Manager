@@ -46,6 +46,7 @@ const UserAvatar = () => {
                       className="text-gray-700 group flex w-full items-center rounded-md px-2 py-2 text-base"
                     >
                       <FaUser className="mr-2" aria-hidden="true" />
+                      Profile
                     </button>
                   )}
                 </Menu.Item>
