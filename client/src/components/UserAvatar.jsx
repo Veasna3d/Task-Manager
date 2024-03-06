@@ -43,7 +43,7 @@ const UserAvatar = () => {
                   {({ active }) => (
                     <button
                       onClick={() => setOpen(true)}
-                      className="text-gray-700 group flex w-full items-center rounded-md px-2 py-2 text-base"
+                      className="text-gray-700 hover:bg-[#2564ed2d] group flex w-full items-center rounded-md px-2 py-2 text-base"
                     >
                       <FaUser className="mr-2" aria-hidden="true" />
                       Profile
@@ -55,7 +55,7 @@ const UserAvatar = () => {
                   {({ active }) => (
                     <button
                       onClick={() => setOpenPassword(true)}
-                      className="text-gray-700 group flex w-full items-center rounded-md px-2 py-2 text-base"
+                      className="text-gray-700 hover:bg-[#2564ed2d] group flex w-full items-center rounded-md px-2 py-2 text-base"
                     >
                       <FaUserLock className="mr-2" aria-hidden="true" />
                       Change Password
@@ -67,7 +67,7 @@ const UserAvatar = () => {
                   {({ active }) => (
                     <button
                       onClick={logoutHandler}
-                      className="text-gray-700 group flex w-full items-center rounded-md px-2 py-2 text-base"
+                      className="text-gray-700 hover:bg-[#2564ed2d] group flex w-full items-center rounded-md px-2 py-2 text-base"
                     >
                       <IoLogOutOutline className="mr-2" aria-hidden="true" />
                       Logout
